@@ -5,12 +5,12 @@ face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 eyes_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
 
 # Define function that will do detection
-def detect(grey, frame):
+def detect(gray, frame):
   """ Input = greyscale image or frame from video stream
       Output = Image with rectangle box in the face
   """
   # Now get the tuples that detect the faces using above cascade
-  faces = face_cascade.detectMultiScale(grey, 1.3, 5)
+  faces = face_cascade.detectMultiScale(gray, 1.3, 5)
   # faces are the tuples of 4 numbers
   # x,y => upperleft corner coordinates of face
   # width(w) of rectangle in the face
@@ -25,10 +25,10 @@ def detect(grey, frame):
     # Arguements => image, top-left coordinates, bottomright coordinates, color, rectangle border thickness
     
     # we now need two region of interests(ROI) grey and color for eyes one to detect and another to draw rectangle
-    roi_grey = grey[x:x+w, y:y+h]
-    roi_color = frame[x:x+w, y:y+h]
+    roi_gray = gray[y:y+h, x:x+w]
+    roi_color = frame[y:y+h, x:x+w]
     # Detect eyes now
-    eyes = eyes_cascade.detectMultiScale(roi_grey, 1.1, 3)
+    eyes = eyes_cascade.detectMultiScale(roi_gray, 1.1, 3)
     # Now draw rectangle over the eyes
     for (ex, ey, ew, eh) in eyes:
       cv2.rectangle(roi_color, (ex,ey), (ex+ew, ey+eh), (0, 255, 0), 2)
