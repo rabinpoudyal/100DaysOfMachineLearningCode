@@ -5,11 +5,13 @@
 ### Computer Vision:
 #### Today's Work:
 Face and eye detection in OpenCV using Haar cascades. Also wrote a tutorial on how to do this and published in medium.
-Blogpost for face detection is published in: https://blog.goodaudience.com/real-time-face-and-eyes-detection-with-opencv-54d9ccfee6a8
 
 
 #### Thoughts:
 Haar cascade is not much powerful since it is only for front side faced faces and it is not based upon neural network or so. But it does a good job for simple applications
+
+##### Link to work:
+https://blog.goodaudience.com/real-time-face-and-eyes-detection-with-opencv-54d9ccfee6a8
 
 ## Day 2 - June 14
 ### Computer Vision:
@@ -28,5 +30,6 @@ Wrote a blog post about SSD alogrithm. Learned foundation of Convolutional Neura
 #### Thoughts:
 CNN is new for me so it is taking time
 
-Link to work: https://medium.com/@rabinpoudyal1995/ssd-single-shot-multi-box-detection-for-real-time-object-detection-5f2a06e33a4a 
+#####Link to work: 
+https://medium.com/@rabinpoudyal1995/ssd-single-shot-multi-box-detection-for-real-time-object-detection-5f2a06e33a4a 
 
